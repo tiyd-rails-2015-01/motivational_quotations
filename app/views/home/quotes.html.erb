@@ -1,2 +1,8 @@
-<h1>Home#quotes</h1>
-<p>Find me in app/views/home/quotes.html.erb</p>
+<h1>Quotation Generator!</h1>
+<p>Select the type of mood you are in below!</p>
+
+<%= form_tag do %>
+<%= select_tag "mood", options_for_select(@moods) %>
+<%= submit_tag %>
+<% end %>
+<%= image_tag "#{@image_folder}/#{rand(4)}.png" %>
