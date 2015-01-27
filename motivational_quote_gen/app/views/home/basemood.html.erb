@@ -1,2 +1,8 @@
-<h1>Home#basemood</h1>
-<p>Find me in app/views/home/basemood.html.erb</p>
+<h1>Welcome to Solomon's Mood Generator</h1>
+
+<%= form_tag do %>
+  <%= select_tag "input_mood", options_for_select(["Happy","Sad", "Blah","Morose"]) %>
+
+  <%= submit_tag%>
+  <% end %>
+<p> Your quote: <%= @quote%> </p>
