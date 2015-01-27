@@ -1,15 +1,12 @@
 <h1>What is your current mood?</h1>
-<p>Find me in app/views/home/mood.html.erb</p>
-<form>
-  <select name="Moods">
-    <option>Happy</option>
-    <option>Sad</option>
-    <option>Angry</option>
-    <option>Sarcastic</option>
-    <option>Giddy</option>
-    <option>Frustrated</option>
+<!-- <p>Find me in app/views/home/mood.html.erb</p> -->
 
-  </select>
+<%= form_tag do %>
+  <%= select_tag "mood", options_for_select([ "Happy", "Sad", "Angry", "Frightened", "Frustrated", "Sarcastic"], @mood), include_blank: true %>
 
-  <button>Submit?</button>
-</form>
+  <%= submit_tag("Click iiiiiiiiiit") %>
+<% end %>
+
+<p><h3><%= @quote %></h3></p>
+<p><img src= "<%= @picture %>"></p>
+<!-- <p><%= @picture %></p> -->
