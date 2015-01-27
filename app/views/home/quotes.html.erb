@@ -3,7 +3,7 @@
 
 <%= form_tag do %>
 <%= select_tag "mood", options_for_select(@moods) %>
-<%= submit_tag %>
+<%= submit_tag "What's your mood?" %>
 <% end %>
 <%= simple_format(@quote) %>
 <%= image_tag "#{@image_folder}/#{rand(1..5)}.jpg", size: "400x400", alt: "mood_ring.jpg" %>
