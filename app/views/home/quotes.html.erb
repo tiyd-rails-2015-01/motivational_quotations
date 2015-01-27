@@ -5,4 +5,5 @@
 <%= select_tag "mood", options_for_select(@moods) %>
 <%= submit_tag %>
 <% end %>
-<%= image_tag "#{@image_folder}/#{rand(4)}.png" %>
+<%= simple_format(@quote) %>
+<%= image_tag "#{@image_folder}/#{rand(1..5)}.jpg", size: "400x400", alt: "mood_ring.jpg" %>
