@@ -1,2 +1,24 @@
-<h1>Home#dashboard</h1>
-<p>Find me in app/views/home/dashboard.html.erb</p>
+<head>
+<style>
+  body {background-color:lightgray}
+  h1   {color:blue}
+  p    {color:green}
+</style>
+</head>
+
+
+
+
+<h1>Tell Me Your Mood!</h1>
+<p> Use the drop down menu to sellect your mood.</p>
+
+<%= form_tag do %>
+  <%= select_tag "mood", options_for_select([ "-----", "Happy", "Sad", "Meh" ]) %>
+
+  <%= submit_tag %>
+<% end %>
+
+<p>You picked: <%= @mood %></p>
+
+<p>Your inspirational quote is: <%= @mood_quote %></p>
+<img src= <%= @mood_image %> alt="some_text" style="width:400px;height:400px"></img>
