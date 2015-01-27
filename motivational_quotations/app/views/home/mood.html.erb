@@ -1,0 +1,28 @@
+
+<h1>Take a seat on the couch</h1>
+<h2>How are you feeling today?</h2>
+<!-- <form> -->
+
+<%= form_tag do %>
+  <%= select_tag "moods", options_for_select(["debbie_downer", "sloth", "content", "empowered",
+    "gleeful", "estatic"]), include_blank: true %>
+
+  <!-- <form>
+  <select name = "choose your mood:">
+    <option>debbie downer</option>
+    <option>sloth</option>
+    <option>content </option>
+    <option>empowered </option>
+    <option>gleeful</option>
+    <option>estatic </option>
+  </select>
+
+  <br> -->
+
+  <!-- <button> -->
+     <%= submit_tag("Tell me, how does that make you feel?") %>
+
+<% end %>
+<%= @quote %>
+<br>
+<img src= " <%= @shownimage %>">
