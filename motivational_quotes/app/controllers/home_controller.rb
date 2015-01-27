@@ -1,12 +1,4 @@
 class HomeController < ApplicationController
-  # From the user's point of view:
-  #
-  # The user should be able to go to the root URL of the application and be asked for their current mood. The mood should be selected from a dropdown with a pre-defined set of moods (determined by you).
-  # The user should be able to submit their mood via an HTML form, and he/she will then be presented with a motivational quotation.
-  # An image related to the quotation should be shown underneath the quotation as well.
-  # In terms of code:
-  #
-  # The application should have one view, one controller, and no models.
   def mood
     @quotes= {
     "Mad"=> [ ["“When you're mad, try to sit alone and think back. Remember,
@@ -45,8 +37,17 @@ class HomeController < ApplicationController
   if params[:mood]
       mood = @quotes[params[:mood]].sample
       @message= mood[0]
-      @image= mood[1]
+      @image= generate_memes
     end
 
   end
+
+  def generate_memes
+    url="http://version1.api.memegenerator.net/Generators_Search?q=#{params[:mood]}&pageIndex=0&pageSize=12"
+    page = HTTParty.get(url).response.body
+    response = JSON.parse(page)
+    results = response['result']
+    return results[0]["imageUrl"]
+  end
+
 end
