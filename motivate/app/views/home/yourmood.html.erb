@@ -1,2 +1,26 @@
-<h1>Home#yourmood</h1>
-<p>Find me in app/views/home/yourmood.html.erb</p>
+<body bgcolor="#D2691E">
+<div>
+  <h1>Your Mood, In Goats</h1>
+
+  <h2>How are you feeling?</h2>
+
+  <%= form_tag do %>
+  <%= select_tag "mood", options_for_select([
+        "Chipper",
+        "Grouchy",
+        "Punchy",
+        "Fell",
+        "Exultant",
+        "Vengeful",
+        "Bourgeois" ]) %>
+
+  <%= submit_tag %>
+  <% end %>
+</div>
+
+<div>
+  <p><h3>You're feeling <%= @mood %>?</h3></p>
+
+  <p><h4><%= @returned_val %></h4></p>
+  <img src="<%=@goat_src%>">
+</div>
