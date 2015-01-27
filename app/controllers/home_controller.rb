@@ -10,13 +10,13 @@ class HomeController < ApplicationController
     @coooool_quotes = ["The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. Blessed is he, who in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy my brothers. And you will know my name is the Lord when I lay my vengeance upon thee! - Ezekiel 25:17", "If the facts don't fit the theory, change the facts. - Albert Einstein", "Time is a great teacher, but unfortunately it kills all its pupils. - Louis Hector Berlioz", "What you call love was invented by guys like me … to sell nylons. - Don Draper" ]
     @quote = ""
     if params[:mood] == "Villainous"
-      @quote = @villainous_quotes[rand(4)]
+      @quote = @villainous_quotes[rand(0..4)]
     elsif params[:mood] == "Dalai-Lama-Esque"
-      @quote = @dalai_lama_esque_quotes[rand(3)]
+      @quote = @dalai_lama_esque_quotes[rand(0..3)]
     elsif params[:mood] == "Melancholy"
-      @quote = @melancholy_quotes[rand(3)]
+      @quote = @melancholy_quotes[rand(0..3)]
     elsif params[:mood] == "Sanctimonious"
-      @quote = @sanctimonious_quotes[rand(3)]
+      @quote = @sanctimonious_quotes[rand(0..3)]
     else
       @quote = @coooool_quotes[rand(3)]
     end
