@@ -1,0 +1,10 @@
+<h1>What kind of mood are you in?</h1>
+
+<%= form_tag do %>
+<%= select_tag "motivate", options_for_select(@quotes.keys, params[:motivate]) %>
+
+<%=submit_tag%>
+<% end %>
+
+<p><%= @motivate_quote %></p>
+<%= image_tag(@image, width: 500)%>
