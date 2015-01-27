@@ -1,0 +1,13 @@
+<h1>Pick Your Mood!</h1>
+<p></p>
+<h2>Select your mood.</h2>
+
+<%= form_tag do %>
+  <%= select_tag "mood", options_for_select([ "Happy", "Sad", "Anxious", "Depressed" ]) %>
+  <%= submit_tag %>
+<% end %>
+
+<p>Your mood: <%= @mood %></p>
+
+<p>Motivational Quote: <%= @quote %></p>
+<img src= <%= @mood_image %> ></img>
