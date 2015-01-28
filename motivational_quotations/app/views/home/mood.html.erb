@@ -2,11 +2,19 @@
 <p>Please select your current mood:</p>
 
 <%= form_tag do %>
-  <%= select_tag "mood", options_for_select(["Happy", "Sad", "Angry", "Calm", "Sleepy", "Industrious"]) %>
+  <%= select_tag "mood_selector", options_for_select(["Happy", "Sad", "Angry", "Calm", "Sleepy", "Industrious"]), {include_blank: true} %>
 
-  <%= submit_tag "submit" %>
+  <%= submit_tag value = "submit" %>
 <% end %>
 
-<!-- <p>You picked: <%= @mood %></p>
+<div>
 
-<p><%= @mood %></p> -->
+<% if @mood != '' %>
+  <p>You picked: <%= @mood %></p>
+
+  <p><%= @quote %></p>
+
+  <%= image_tag(@image, width:600) %>
+<% end %>
+
+</div>
