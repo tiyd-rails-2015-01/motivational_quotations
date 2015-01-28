@@ -3,7 +3,7 @@
 <h1> Bow-chica-wow-wow. What is your mood? </h1>
 
 <%= form_tag do %>
-  <%= select_tag "mood", options_for_select([ "Nothing", "Pharrell- Happy", "Michael Scott- Lost", "Michael Byrd- Genius", "Mason- LOVES Kitties" ]) %>
+  <%= select_tag("mood", options_for_select([ "Nothing", "Pharrell- Happy", "Michael Scott- Lost", "Michael Byrd- Genius", "Mason- LOVES Kitties" ], @mood), {include__blank: true}) %>
   <%= submit_tag "Click Here" %>
 <% end %>
 
