@@ -1,0 +1,16 @@
+<h1>GOATIVATION</h1>
+<h2>Goats and friends for your every mood.</h2>
+<h3>Choose the word that best describes how you feel right now:</h3>
+
+<%= form_tag do %>
+<%= select_tag "current_mood", options_for_select(["Prepare yourself to...", "Awesome", "Bored", "Content", "Disgruntled", "Excited", "Fretful" ], @mood), :style => 'width: 175px;' %>
+<%= submit_tag value = "Activate GOATIVATION!"%>
+<% end %>
+
+<p></p>
+<h3>Your words of wisdom are:</h3>
+<p><%= @wisdom %></p>
+<p><%= @name %></p>
+<img src = <%= @image %>  height="400">
+<p>Photos are all from <a href="https://www.facebook.com/pages/SheerLark-Farm/341548307271" target="_blank">SheerLark Farm</a>.</p>
+<p>Quotes taken from <a href="https://www.brainyquote.com" target="_blank">BrainyQuote.com</a>.</p>
