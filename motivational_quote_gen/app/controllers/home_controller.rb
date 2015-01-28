@@ -12,6 +12,7 @@ class HomeController < ApplicationController
       @picture = sad_picture
     elsif @mood == "Morose"
       @quote = morose_quotes
+      @picture = morose_picture
     end
   end
 
@@ -66,15 +67,21 @@ class HomeController < ApplicationController
   end
 
   def blah_picture
-    blah_link = {1=>"",
-                 2=>"",
-                 3=>"",
-                 4=>"",
+    blah_link = {1=>"http://bit.ly/1uZPI62",
+                 2=>"https://www.frontlinegaming.org/wp-content/uploads/2014/07/FT_GetPumped.jpg",
+                 3=>"http://allyoucanlove.com/wp-content/uploads/2013/06/Get-Pumped-with-Arnold-Schwarzenegger-540x300.jpg",
+                 4=>"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTW0ms0ToiHEq12wXsgtDH07Ha65xgbfBopof3bcMBQXgE1JytjnA",
                  }
     return blah_link[rand(1..4)]
   end
 
   def morose_picture
+    morose_link = {1=>"http://i812.photobucket.com/albums/zz46/SLumy/candles.jpg",
+                   2=>"http://calmingmanatee.com/img/manatee.jpg",
+                   3=>"http://fc09.deviantart.net/fs70/i/2014/025/5/b/eren_jaeger_s_determined_eyes__by_graffitiblade-d73mb1n.jpg",
+                   4=>"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRu3-5784yEglt6aV3wNqcA9JqlCGP4sDr-rfIZVvWsRnkeJ7neYw",
+                   }
+    return morose_link[rand(1..4)]
   end
 
 
