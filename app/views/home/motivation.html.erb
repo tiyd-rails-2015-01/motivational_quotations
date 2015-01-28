@@ -1,0 +1,12 @@
+<h1>Welcome to a world of motivation</h1>
+<p>How are you feeling right now?</p>
+
+
+<%= form_tag do %>
+ <%= select_tag "your_mood", options_for_select([ "Happy", "Sad","I just don't know how to feel anymore","ok" ], params[:your_mood]) %>
+
+ <%= submit_tag %>
+<% end %>
+
+<p>Think on this: <%= @quote %></p>
+<%= image_tag(@image, width: 600) %>
