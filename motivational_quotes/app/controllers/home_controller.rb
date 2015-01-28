@@ -28,8 +28,8 @@ class HomeController < ApplicationController
                 ["“I'm so tired I never want to wake up again. But I've figured out now that it was never them that made me feel that way. It was just me, all along.” - Maggie Stiefvater", "tired3.jpeg"]],
 
     "Stressed"=> [["“In times of stress, the best thing we can do for each other is to listen with our ears and our hearts and to be assured that our questions are just as important as our answers.” - Fred \"Mister\" Rogers", "stressed.jpg"],
-                  ["“The people in my circle? Those who make me feel blessed; not stressed.”― Steve Maraboli", "stressed2.jpg"],
-                  ["“You must learn to let go. Release the stress. You were never in control anyway.” ― Steve Maraboli", "stressed3.jpg"]]
+                  ["“The people in my circle? Those who make me feel blessed; not stressed.”- Steve Maraboli", "stressed2.jpg"],
+                  ["“You must learn to let go. Release the stress. You were never in control anyway.” - Steve Maraboli", "stressed3.jpg"]]
                   }
 
 
@@ -43,7 +43,7 @@ class HomeController < ApplicationController
 
 
 
-  def make_meme_request
+  private def make_meme_request
     @url="http://version1.api.memegenerator.net/Generators_Search?q=#{params[:mood]}&pageIndex=0&pageSize=12"
     page = HTTParty.get(@url).response.body
     response = JSON.parse(page)
@@ -65,7 +65,7 @@ class HomeController < ApplicationController
     get_image_url(url)
   end
 
-  def get_image_url(url)
+  private def get_image_url(url)
     url=URI.encode(url)
     page = HTTParty.get(url).response.body
     response = JSON.parse(page)
