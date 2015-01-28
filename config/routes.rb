@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/quotes'
   post 'home/quotes'
 
   # The priority is based upon order of creation: first created -> highest priority.
