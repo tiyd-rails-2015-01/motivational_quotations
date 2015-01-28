@@ -1,0 +1,12 @@
+<h1>Moods</h1>
+<p>Please select your current mood:</p>
+
+<%= form_tag do %>
+  <%= select_tag "mood", options_for_select(["Happy", "Sad", "Angry", "Calm", "Sleepy", "Industrious"]) %>
+
+  <%= submit_tag "submit" %>
+<% end %>
+
+<!-- <p>You picked: <%= @mood %></p>
+
+<p><%= @mood %></p> -->
