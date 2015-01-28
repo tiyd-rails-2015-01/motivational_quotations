@@ -1,0 +1,32 @@
+<body bgcolor="#D2691E">
+<div>
+  <h1>Your Mood, In Goats</h1>
+
+  <h2>How are you feeling?</h2>
+
+  <%= form_tag do %>
+  <%= select_tag "mood", options_for_select([
+        "Chipper",
+        "Grouchy",
+        "Punchy",
+        "Fell",
+        "Exultant",
+        "Vengeful",
+        "Bourgeois" ]) %>
+  <br><br>
+  Please select a mode:<br>
+  <%= radio_button_tag 'mode', 'normal', true %> Normal Mode
+  <%= radio_button_tag 'mode', 'nightmare', false %> Nightmare Mode
+  <br>
+
+  <%= submit_tag %>
+  <% end %>
+</div>
+
+<div>
+  <p><h3>You're feeling <%= @mood %>?</h3></p>
+
+  <p><h4><%= @returned_val %></h4></p>
+  <img src="<%=@goat_src%>">
+  <p>Radio: <%=@radio%></p>
+</div>
