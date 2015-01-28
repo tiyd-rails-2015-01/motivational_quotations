@@ -9,12 +9,12 @@
 
 <div>
 
-<% if @mood != '' %>
-  <p>You picked: <%= @mood %></p>
+<% if @quote.mood != '' %>
+  <p>You picked: <%= @quote.mood %></p>
 
-  <p><%= @quote %></p>
+  <p><%= @quote.quote %></p>
 
-  <%= image_tag(@image, width:600) %>
+  <%= image_tag(@quote.image, width:600) %>
 <% end %>
 
 </div>
