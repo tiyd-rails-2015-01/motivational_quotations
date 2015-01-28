@@ -11,7 +11,7 @@ class HomeController < ApplicationController
     elsif @mood == "Pharrell- Happy"
       @mood_image = ["http://media.giphy.com/media/CaOc1VWJGBa00/giphy.gif",
                      "http://siliconangle.com/files/2011/08/matz.jpg"].sample
-      @mot_quote = ["I HAS ALL THE HAPPINESS", "Momma said life is like a box of chocalates. You never know which one you're gunna get."].sample
+      @mot_quote = ["I HAS ALL THE HAPPINESS", "Momma said life is like a box of chocolates. You never know which one you're gunna get."].sample
 
     elsif @mood == "Michael Scott- Lost"
       @mood_image = ["https://s-media-cache-ak0.pinimg.com/736x/e2/88/80/e288808e78af104256acff252ee17ef3.jpg",
