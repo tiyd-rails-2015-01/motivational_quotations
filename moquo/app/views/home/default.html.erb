@@ -1,0 +1,11 @@
+<h1>MoQuo</h1>
+<p>bringing you daily motivation.</p>
+
+<%= form_tag do %>
+<%= select_tag "mood", options_for_select(["","Angry", "Confused", "Sad"]) %>
+
+<%= submit_tag("Howya feelin'") %>
+<% end %>
+<p>You have selected: <%= @mood %></p>
+<p><%= @quote %></p>
+<%= image_tag(@pic) %>
