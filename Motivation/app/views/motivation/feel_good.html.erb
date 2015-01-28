@@ -1,0 +1,17 @@
+<body bgcolor=<%= @background_color %>>
+
+<h1 color=<%= @headline_color_ %>>Hey buddy. How ya feelin'?</h1>
+<div><h2>Please make a selection from the drop down and save changes.</h2></div>
+
+
+<%= form_tag do %>
+<%= select_tag "feelings", options_for_select([ "Make A Selection", "Awesome", "OK", "Could be better", "Whatever" ]) %>
+
+<%= submit_tag %>
+<% end %>
+
+<p>You have selected: <%= @feelings %></p>
+<p>Your quote of the day is: <%= @quote %><p>
+
+
+<%= image_tag(@feelings_image) %>
