@@ -1,0 +1,10 @@
+<h1>Tell me how you feel</h1>
+<%= form_tag do %>
+  <%= select_tag "feeling", options_for_select([ "..", "Angry", "Happy", "Meh", "Motivated" ]) %>
+
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<p><%= @quote %></p>
+
+<img style="width:600px" src="<%= @image %>">
