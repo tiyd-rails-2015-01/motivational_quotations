@@ -41,10 +41,7 @@ class HomeController < ApplicationController
 
   end
 
-  def generate_memes
 
-
-  end
 
   def make_meme_request
     @url="http://version1.api.memegenerator.net/Generators_Search?q=#{params[:mood]}&pageIndex=0&pageSize=12"
