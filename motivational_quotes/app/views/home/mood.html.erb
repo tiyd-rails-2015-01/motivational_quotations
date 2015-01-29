@@ -1,0 +1,8 @@
+<h1>How are you feeling?</h1>
+<%= form_tag do %>
+<%= select_tag "mood", options_for_select(Quotation.all_options.keys, params[:mood]) %>
+<%= submit_tag %>
+<%end%>
+
+<p><%= @quotation.message%></p>
+<p><%= image_tag(@quotation.image, width: 600)%></p>
